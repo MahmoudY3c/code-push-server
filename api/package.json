@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node ./bin/script/server.js",
     "start:env": "node -r dotenv/config ./bin/script/server.js dotenv_config_path=.env dotenv_config_silent=true",
+    "pm2:start": "pm2 start ecosystem.config.js",
     "clean": "rimraf bin",
     "build": "tsc && shx cp -r ./script/views ./bin/script",
     "prettier": "prettier --write \"./**/*.ts\"",
